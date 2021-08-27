@@ -33,6 +33,8 @@
           },
           "configurations": {
             "production": {
+              "outputPath": "../../../public/assets/angular", 
+              "deployUrl": "/ assets / angular /",
               "budgets": [
                 {
                   "type": "initial",
@@ -60,6 +62,10 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "dev": { 
+              "outputPath": "dist / assets / angular", 
+              "baseHref": "/ assets / angular /" 
             }
           },
           "defaultConfiguration": "production"
@@ -67,11 +73,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+
             "production": {
               "browserTarget": "angular:build:production"
             },
             "development": {
-              "browserTarget": "angular:build:development"
+              "browserTarget": "angular:build:dev"
             }
           },
           "defaultConfiguration": "development"
